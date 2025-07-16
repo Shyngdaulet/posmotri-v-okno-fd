@@ -1,1 +1,1 @@
-https://github.com/Shyngdaulet/posmotri-v-okno-fd#
+https://github.com/Shyngdaulet/posmotri-v-okno-fd
