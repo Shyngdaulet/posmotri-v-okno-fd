@@ -7,6 +7,38 @@ html {
   block-size: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Кастомный скроллбар */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgb(217 217 217 / 10%);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #d9d9d9;
+}
+
 .page {
   display: flex;
   justify-content: center;
@@ -14,6 +46,7 @@ html {
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
+  padding: 0 16px;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
@@ -24,7 +57,7 @@ html {
   display: flex;
   align-items: flex-end;
   gap: 30px;
-  width: 1000px;
+  width: 100%;
 }
 
 .result {
@@ -35,6 +68,7 @@ html {
   width: 100%;
   height: 386px;
   margin-bottom: 16px;
+  position: relative;
 }
 
 .result__video {
@@ -70,6 +104,7 @@ html {
   gap: 30px;
   height: 298px;
   overflow-y: auto;
+  position: relative;
 }
 
 .content__list {
@@ -165,7 +200,7 @@ html {
 }
 
 .search-form__fieldset:first-child {
-  flex: 1;
+  flex: 0 0 auto;
 }
 
 .search-form__fieldset-title {
@@ -221,8 +256,8 @@ html {
 }
 
 .search-form__textfield {
-  flex: 1;
-  min-width: 0;
+  width: 240px;
+  height: 30px;
   padding: 2px 4px;
   background-color: transparent;
   border: none;
@@ -236,38 +271,6 @@ html {
 
 .search-form__textfield::placeholder {
   color: rgb(255, 255, 255 / 0.7);
-}
-
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-ol,
-li,
-blockquote,
-fieldset {
-  margin: 0;
-  padding: 0;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
-/* Кастомный скроллбар */
-.custom-scrollbar::-webkit-scrollbar {
-  width: 4px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: rgb(217 217 217 / 10%);
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #d9d9d9;
 }
 
 .visually-hidden {
@@ -325,8 +328,3 @@ ol {
 .content__list-container {
   position: relative;
 }
-/* Нужен совет
-При работе с инпутом, я заметил, что placeholder="Санкт Петербург, например" частично обрезается. 
-Я перепробовал flex, min-width, max-width, и placeholder становился еще меньше, чем должен был.
-Также я менял .result и .search-form изменяя их width и max-width, но ничего не изменилось
-Пожалуйста, дайте совет, что можно сделать, чтоб  placeholder не обрезался */
