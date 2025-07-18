@@ -46,7 +46,7 @@ ol {
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
-  padding: 0 16px;
+  padding: 0 100px;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
@@ -256,8 +256,7 @@ ol {
 }
 
 .search-form__textfield {
-  width: 240px;
-  height: 30px;
+  width: 219px;
   padding: 2px 4px;
   background-color: transparent;
   border: none;
