@@ -46,7 +46,7 @@ ol {
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
-  padding: 0 100px;
+  padding: 0 16px;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
@@ -67,7 +67,7 @@ ol {
 .result__video-container {
   width: 100%;
   height: 386px;
-  margin-bottom: 16px;
+  margin-bottom: 5px;
   position: relative;
 }
 
@@ -102,6 +102,7 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  width: 398px;
   height: 298px;
   overflow-y: auto;
   position: relative;
@@ -110,7 +111,7 @@ ol {
 .content__list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px;
 }
 
 .content__card-link {
@@ -153,6 +154,7 @@ ol {
 }
 
 .content__video-card-title {
+  font-family: Oswald;
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
@@ -160,12 +162,14 @@ ol {
   overflow: hidden;
   white-space: nowrap;
   text-transform: uppercase;
-  max-width: 200px;
+  max-width: 196px;
+  margin-bottom: 5px;
 }
 
 .content__video-card-description {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 17px;
+  letter-spacing: 0.4px;
   line-height: 16px;
 
   display: -webkit-box;
@@ -191,12 +195,14 @@ ol {
   gap: 20px;
   max-width: 711px;
   width: 100%;
-  margin-bottom: 16px;
+  margin-bottom: 5px;
 }
 
 .search-form__fieldset {
-  flex: 1;
   border: none;
+  width: auto;
+  padding: 0;
+  margin: 0;
 }
 
 .search-form__fieldset:first-child {
@@ -204,7 +210,7 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   margin-bottom: 5px;
@@ -212,14 +218,17 @@ ol {
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 15px;
+  gap: 16px;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
 .search-form__label {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 5px;
-  width: 100%;
+  gap: 6px;
+  width: auto;
   cursor: pointer;
 }
 
@@ -229,13 +238,14 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   border: 1px solid #ffffff;
-  padding: 1px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
 .search-form__pseudo-checkbox::after {
@@ -256,8 +266,8 @@ ol {
 }
 
 .search-form__textfield {
-  width: 219px;
-  padding: 2px 4px;
+  width: 216px;
+  padding: 1px 2px;
   background-color: transparent;
   border: none;
   border-top: 1px solid #ffffff;
@@ -296,8 +306,9 @@ ol {
 
 .search-form__submit-button {
   align-self: flex-end;
-  width: 194px;
+  width: 188px;
   height: 34px;
+  text-transform: capitalize;
 }
 
 .more-button {
